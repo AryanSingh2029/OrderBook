@@ -1,0 +1,16 @@
+{
+  "external_events": 6,
+  "signals_triggered": 2,
+  "orders_sent": 2,
+  "filled_orders": 2,
+  "requested_qty": 20,
+  "filled_qty": 20,
+  "fill_ratio": 1,
+  "inventory": 20,
+  "avg_cost": 101,
+  "realized_pnl": 0,
+  "unrealized_pnl": 1990,
+  "total_pnl": 1990,
+  "adverse_selection_events": 1,
+  "adverse_selection_notional": 5
+}

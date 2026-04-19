@@ -1,0 +1,7 @@
+event_timestamp,symbol,buy_order_id,sell_order_id,trade_price,trade_quantity,trade_timestamp
+4,AAPL,1101,1104,100,40,5
+5,AAPL,1105,1103,102,50,7
+9,MSFT,2103,2101,205,30,4
+10,MSFT,2102,2104,204,50,6
+14,BTCUSD,3103,3102,60005,1,4
+15,BTCUSD,3101,3104,60000,2,6

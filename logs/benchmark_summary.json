@@ -1,0 +1,70 @@
+{
+  "scenarios": [
+    {
+      "name": "Small correctness run",
+      "events_processed": 500,
+      "total_ms": 0.218208,
+      "throughput": 2.29139e+06,
+      "average_latency_ns": 407,
+      "worst_case_latency_ns": 4500,
+      "p50_latency_ns": 250,
+      "p99_latency_ns": 2583,
+      "peak_memory_mb": 1.64062,
+      "resting_orders": 46,
+      "latency_histogram": [
+        {"label": "<=100ns", "count": 55},
+        {"label": "101-250ns", "count": 210},
+        {"label": "251-500ns", "count": 128},
+        {"label": "501ns-1us", "count": 68},
+        {"label": "1-2us", "count": 29},
+        {"label": "2-5us", "count": 10},
+        {"label": "5-10us", "count": 0},
+        {"label": ">10us", "count": 0}
+      ]
+    },
+    {
+      "name": "Medium load",
+      "events_processed": 50000,
+      "total_ms": 13.8894,
+      "throughput": 3.59986e+06,
+      "average_latency_ns": 252,
+      "worst_case_latency_ns": 73667,
+      "p50_latency_ns": 167,
+      "p99_latency_ns": 958,
+      "peak_memory_mb": 11.3594,
+      "resting_orders": 2763,
+      "latency_histogram": [
+        {"label": "<=100ns", "count": 9269},
+        {"label": "101-250ns", "count": 25543},
+        {"label": "251-500ns", "count": 11025},
+        {"label": "501ns-1us", "count": 3737},
+        {"label": "1-2us", "count": 332},
+        {"label": "2-5us", "count": 41},
+        {"label": "5-10us", "count": 34},
+        {"label": ">10us", "count": 19}
+      ]
+    },
+    {
+      "name": "Heavy load",
+      "events_processed": 500000,
+      "total_ms": 84.1494,
+      "throughput": 5.94181e+06,
+      "average_latency_ns": 153,
+      "worst_case_latency_ns": 940667,
+      "p50_latency_ns": 84,
+      "p99_latency_ns": 583,
+      "peak_memory_mb": 101.844,
+      "resting_orders": 28459,
+      "latency_histogram": [
+        {"label": "<=100ns", "count": 258452},
+        {"label": "101-250ns", "count": 175603},
+        {"label": "251-500ns", "count": 58904},
+        {"label": "501ns-1us", "count": 6119},
+        {"label": "1-2us", "count": 660},
+        {"label": "2-5us", "count": 130},
+        {"label": "5-10us", "count": 99},
+        {"label": ">10us", "count": 33}
+      ]
+    }
+  ]
+}

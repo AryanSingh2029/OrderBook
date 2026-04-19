@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Book Replay UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <h1>Order Book Replay UI</h1>
+        <p>Replay events, inspect per-symbol books, compare state changes, and explore strategy and benchmark outputs.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="prev-btn" type="button">Previous</button>
+        <button id="next-btn" type="button">Next</button>
+        <button id="play-btn" type="button">Play</button>
+      </div>
+    </header>
+
+    <section class="controls card">
+      <label>
+        Symbol
+        <select id="symbol-select"></select>
+      </label>
+      <label class="slider-wrap">
+        Event
+        <input id="event-slider" type="range" min="0" max="0" value="0">
+      </label>
+      <div id="event-counter" class="counter"></div>
+    </section>
+
+    <section class="grid">
+      <article class="card event-card">
+        <h2>Current Event</h2>
+        <div id="event-details" class="detail-list"></div>
+      </article>
+
+      <article class="card metric-card">
+        <h2>Top of Book</h2>
+        <div id="top-metrics" class="metric-grid"></div>
+      </article>
+
+      <article class="card metric-card">
+        <h2>Depth Summary</h2>
+        <div id="depth-metrics" class="metric-grid"></div>
+      </article>
+
+      <article class="card diff-card">
+        <h2>Event Diff</h2>
+        <div id="event-diff" class="stack-list"></div>
+      </article>
+
+      <article class="card queue-card">
+        <h2>Queue Position</h2>
+        <div id="queue-panel" class="stack-list"></div>
+      </article>
+
+      <article class="card rejection-card">
+        <h2>Rejections</h2>
+        <div id="rejection-panel" class="stack-list"></div>
+      </article>
+
+      <article class="card chart-card">
+        <h2>Microstructure Timeline</h2>
+        <div class="chart-legend">
+          <span class="legend-item legend-spread">Spread</span>
+          <span class="legend-item legend-mid">Mid</span>
+          <span class="legend-item legend-imbalance">Imbalance</span>
+        </div>
+        <svg id="timeline-chart" viewBox="0 0 600 220" preserveAspectRatio="none"></svg>
+      </article>
+
+      <article class="card heatmap-card">
+        <h2>Depth Heatmap</h2>
+        <div id="heatmap" class="heatmap-grid"></div>
+      </article>
+
+      <article class="card book-card">
+        <h2>Asks</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Orders</th>
+            </tr>
+          </thead>
+          <tbody id="ask-body"></tbody>
+        </table>
+      </article>
+
+      <article class="card book-card">
+        <h2>Bids</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Orders</th>
+            </tr>
+          </thead>
+          <tbody id="bid-body"></tbody>
+        </table>
+      </article>
+
+      <article class="card trades-card">
+        <h2>Trades At This Event</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Buy ID</th>
+              <th>Sell ID</th>
+              <th>Price</th>
+              <th>Qty</th>
+            </tr>
+          </thead>
+          <tbody id="trade-body"></tbody>
+        </table>
+      </article>
+
+      <article class="card trades-card">
+        <h2>Recent Trades</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Buy</th>
+              <th>Sell</th>
+              <th>Price</th>
+              <th>Qty</th>
+            </tr>
+          </thead>
+          <tbody id="recent-trades-body"></tbody>
+        </table>
+      </article>
+
+      <article class="card strategy-card">
+        <h2>Strategy Sandbox</h2>
+        <div id="strategy-panel" class="metric-grid"></div>
+      </article>
+
+      <article class="card benchmark-card">
+        <h2>Benchmark Dashboard</h2>
+        <div id="benchmark-panel" class="benchmark-stack"></div>
+      </article>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
